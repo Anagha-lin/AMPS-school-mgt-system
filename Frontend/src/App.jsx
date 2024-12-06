@@ -5,7 +5,7 @@ import ChooseUser from '../src/components/ChooseUser';
 import AdminSignIn from '../src/components/AdminSignIn';
 import StudentSignIn from '../src/components/StudentSignIn';
 import TeacherSignIn from '../src/components/TeacherSignIn';
-import AdminDashboard from '../pages/Admin/Dashboard';
+import AdminDashboard from '../src/pages/Admin/Dashboard';
 import StudentDashboard from '../src/pages/Students/Dashboard';
 import TeacherDashboard from '../src/pages/Teachers/Dashboard';
 
