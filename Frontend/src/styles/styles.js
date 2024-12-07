@@ -97,7 +97,7 @@ export const GuestButton = styled.button`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: orange;
+    background-color: green;
   }
 
   @media screen and (max-width: 768px) {
