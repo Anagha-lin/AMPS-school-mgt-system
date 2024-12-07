@@ -33,7 +33,7 @@ const Home = () => {
       </Navbar>
       <HomeContainer>
         <SchoolInfo>
-          <Title>School Management System</Title>
+          <Title>AMPS School Management System</Title>
           <LoremTextContainer>
             <p>{loremText}</p>
           </LoremTextContainer>
