@@ -1,14 +1,16 @@
 import mongoose from "mongoose";
 
-export const dbConnection = () => {
-    const mongoUrl = process.env.MONGO_URL;
+mongoose.set("debug", true); // Add this line for detailed logs
 
-    console.log("Attempting to connect to MongoDB:", mongoUrl);
-
-    mongoose.connect(mongoUrl, { dbName: "SCHOOL_MANAGEMENT_SYSTEM" })
-        .then(() => console.log("Connected to database"))
-        .catch((error) => {
-            console.error("Failed to connect to MongoDB:", error.message);
-        });
+const dbConnection = async () => {
+    try {
+        console.log(`Attempting to connect to MongoDB: ${process.env.MONGO_URL}`);
+        await mongoose.connect(process.env.MONGO_URL); // Deprecated options removed
+        console.log("Successfully connected to MongoDB");
+    } catch (error) {
+        console.error("Failed to connect to MongoDB:", error.message);
+    }
 };
+
+export default dbConnection;
 
