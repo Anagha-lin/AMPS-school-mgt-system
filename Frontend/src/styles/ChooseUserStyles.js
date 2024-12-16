@@ -1,4 +1,4 @@
-// ChooseUserStyles.js
+// ChooseUserStyles.js 
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,7 @@ export const ChooseUserContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   height: 100vh;
-  background-color: #FFD700; /* Playful yellow background color */
+  background-color: #ADD8E6; /* Light blue background color */
 
   @media screen and (min-width: 768px) {
     flex-direction: row;
@@ -32,7 +32,7 @@ export const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #FF4500; /* Admin: Orange color */
+  color: #1E90FF; /* Dodger blue color */
 
   @media screen and (max-width: 768px) {
     font-size: 20px;
@@ -40,7 +40,7 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled(Link)`
-  background-color: #90EE90; /* Student: Light green color */
+  background-color: #FFB6C1; /* Light pink background color */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -51,7 +51,7 @@ export const Button = styled(Link)`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #7CFC00; /* Darker shade of green on hover */
+    background-color: #FF69B4; /* Hot pink color on hover */
   }
 
   @media screen and (max-width: 768px) {
@@ -59,3 +59,4 @@ export const Button = styled(Link)`
     font-size: 14px;
   }
 `;
+
