@@ -32,7 +32,7 @@ export const Section = styled.section`
 export const SectionTitle = styled.h2`
   font-size: 24px;
   margin-bottom: 20px;
-  color: #2F4F4F; /* Dark slate gray for section titles */
+  color: #333333; /* Darker text color */
 `;
 
 export const CardContainer = styled.div`
@@ -41,36 +41,35 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-  background-color: #F0FFFF; /* Azure background for a clean, soft look */
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for better contrast */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
   flex: 1;
   max-width: 250px;
-
   &:hover {
     transform: translateY(-5px);
-    background-color: #E0FFFF; /* Light cyan on hover for subtle interactivity */
   }
 `;
 
 export const CardTitle = styled.h3`
   font-size: 18px;
   margin-bottom: 10px;
-  color: #4682B4; /* Steel blue for card titles */
+  color: #007bff; 
 `;
 
 export const CardContent = styled.p`
   font-size: 16px;
-  color: #696969; /* Dim gray for card content */
+  color: #555555;
 `;
 
 export const StudentDashboardContainer = styled.div`
   display: flex;
   padding-left: 240px;
 `;
+
 
 export const TeacherDashboardContainer = styled.div`
   display: flex;
