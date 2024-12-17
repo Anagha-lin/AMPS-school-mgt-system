@@ -2,77 +2,85 @@
 import styled from 'styled-components';
 
 export const AdminDashboardContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  background-color: #f8f9fa;
 `;
 
 export const Content = styled.div`
   flex: 1;
-  padding: 20px;
-  margin-left: ${({ isOpen }) => (isOpen ? '250px' : '80px')}; /* Adjust margin based on sidebar state */
+  padding: 25px;
+  margin-left: ${({ isOpen }) => (isOpen ? '260px' : '100px')};
   transition: margin-left 0.3s ease;
+  background-color: #ffffff;
 `;
 
 export const TopContent = styled.div`
-  display: flex;
-  gap: 20px;
-  flex: 1; /* Take remaining space */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
 `;
 
 export const BottomContent = styled.div`
-  margin-top: 20px;
-  display: flex; /* Make the content side by side */
-  gap: 20px; /* Add gap between the components */
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
 `;
 
 export const Section = styled.section`
-  margin-bottom: 40px;
-  flex: 1; /* Make the sections expand to fill the available space */
+  margin-bottom: 30px;
+  flex: 1;
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #333333; /* Darker text color */
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #2c3e50;
 `;
 
 export const CardContainer = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
 `;
 
 export const Card = styled.div`
-  background-color: #ffffff;
+  background-color: #e3f2fd;
   padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease-in-out;
   cursor: pointer;
-  flex: 1;
-  max-width: 250px;
+  text-align: center;
   &:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    background-color: #bbdefb;
   }
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 18px;
-  margin-bottom: 10px;
-  color: #007bff; 
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #1e88e5;
 `;
 
 export const CardContent = styled.p`
-  font-size: 16px;
-  color: #555555;
+  font-size: 15px;
+  color: #424242;
 `;
 
 export const StudentDashboardContainer = styled.div`
-  display: flex;
-  padding-left: 240px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: #fafafa;
 `;
 
-
 export const TeacherDashboardContainer = styled.div`
-  display: flex;
-  padding-left: 240px;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  background-color: #fafafa;
+  padding: 20px;
 `;
 
