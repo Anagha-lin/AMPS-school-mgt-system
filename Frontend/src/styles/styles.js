@@ -1,4 +1,3 @@
-// styles.js
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
@@ -10,10 +9,10 @@ export const Navbar = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
-  background-color: #6BD4E7;
-  color: black;
-  font-family: Arial, sans-serif;
+  padding: 15px 25px;
+  background-color: #282c34; /* Dark navy blue for navbar */
+  color: #ffffff; /* White text */
+  font-family: 'Roboto', sans-serif;
   z-index: 1000;
 
   @media screen and (max-width: 768px) {
@@ -23,7 +22,7 @@ export const Navbar = styled.nav`
 `;
 
 export const Logo = styled.img`
-  width: 50px;
+  width: 60px;
   height: auto;
 
   @media screen and (max-width: 768px) {
@@ -41,26 +40,27 @@ export const NavigationLinks = styled.div`
 `;
 
 export const NavLink = styled.a`
-  margin-right: 20px;
-  color: black;
+  margin-right: 15px;
+  color: #f0f0f0; /* Light gray for nav links */
   text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
 
   &:hover {
-    text-decoration: underline;
+    color: #61dafb; /* Soft blue on hover */
   }
 
   @media screen and (max-width: 768px) {
-    margin: 0 10px;
-    font-size: 16px;
+    margin: 5px 10px;
+    font-size: 14px;
   }
 `;
 
 export const ButtonsContainer = styled.div`
   display: flex;
   align-items: center;
-  margin-right: 35px;
+  margin-right: 30px;
 
   @media screen and (max-width: 768px) {
     margin-top: 10px;
@@ -69,40 +69,46 @@ export const ButtonsContainer = styled.div`
 `;
 
 export const LoginButton = styled.button`
-  background-color: orange;
-  color: white;
+  background-color: #4caf50; /* Green for login */
+  color: #ffffff;
   border: none;
-  padding: 10px 20px;
+  padding: 10px 18px;
   margin-right: 10px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #45a049; /* Darker green on hover */
+  }
 
   @media screen and (max-width: 768px) {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 8px 14px;
+    font-size: 12px;
   }
 `;
 
 export const GuestButton = styled.button`
-  color: white;
-  border: none;
-  padding: 10px 20px;
+  color: #282c34;
+  border: 2px solid #61dafb; /* Soft blue border */
+  padding: 10px 18px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
-  border: 2px solid orange;
   border-radius: 5px;
   background-color: transparent;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
 
   &:hover {
-    background-color: green;
+    background-color: #61dafb; /* Soft blue on hover */
+    color: #ffffff;
   }
 
   @media screen and (max-width: 768px) {
-    padding: 8px 16px;
-    font-size: 14px;
+    padding: 8px 14px;
+    font-size: 12px;
   }
 `;
 
@@ -111,7 +117,7 @@ export const HomeContainer = styled.div`
   flex-direction: column;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #6BD4E7, #6FC3DF);
+  background: linear-gradient(135deg, #282c34, #3c4048); /* Gradient background */
   background-size: cover;
   background-position: center;
   min-height: 100vh;
@@ -128,9 +134,10 @@ export const SchoolInfo = styled.div`
 
 export const SchoolImage = styled.img`
   width: 80%;
-  max-height: 80vh;
+  max-height: 70vh;
   object-fit: cover;
   margin-top: 20px;
+  border-radius: 8px;
 
   @media screen and (max-width: 768px) {
     width: 100%;
@@ -138,10 +145,10 @@ export const SchoolImage = styled.img`
 `;
 
 export const Title = styled.h1`
-  font-size: 36px;
+  font-size: 40px;
   font-weight: bold;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #61dafb; /* Soft blue */
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
 
   @media screen and (max-width: 768px) {
     font-size: 28px;
@@ -149,10 +156,10 @@ export const Title = styled.h1`
 `;
 
 export const LoremTextContainer = styled.div`
-  max-width: 800px;
+  max-width: 700px;
   margin: 0 auto;
   font-size: 18px;
-  color: white;
+  color: #f0f0f0; /* Light gray for text */
   text-align: justify;
   padding: 0 20px;
 
@@ -162,17 +169,19 @@ export const LoremTextContainer = styled.div`
 `;
 
 export const AdminRegisterLink = styled(Link)`
-  color: white;
-  font-size: 12px;
+  color: #f0f0f0;
+  font-size: 14px;
   font-weight: bold;
   text-decoration: none;
   margin-top: 10px;
 
   &:hover {
     text-decoration: underline;
+    color: #61dafb; /* Soft blue on hover */
   }
 
   @media screen and (max-width: 768px) {
-    font-size: 10px;
+    font-size: 12px;
   }
 `;
+
