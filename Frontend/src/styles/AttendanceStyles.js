@@ -1,9 +1,11 @@
-// AttendanceStyles.js
 import styled from 'styled-components';
 
 export const AttendanceContainer = styled.div`
   display: flex;
-  padding-left: 240px;
+  padding-left: 250px;
+  background: linear-gradient(135deg, #ecf0f1, #bdc3c7); /* Light gradient background */
+  min-height: 100vh; /* Full viewport height */
+  transition: padding-left 0.3s ease;
 
   @media screen and (max-width: 768px) {
     flex-direction: column;
@@ -16,58 +18,9 @@ export const Content = styled.div`
 `;
 
 export const AttendanceContent = styled.div`
-  padding: 20px;
-`;
+  padding: 30px;
+  background-color: #ffffff; /* White content background */
+  border-radius: 10px; /* Rounded edges */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  margin:
 
-export const AttendanceHeader = styled.h2`
-  font-size: 24px;
-  margin-bottom: 20px;
-`;
-
-export const AttendanceList = styled.ul`
-  list-style: none;
-  padding: 0;
-`;
-
-export const AttendanceItem = styled.li`
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-`;
-
-export const StudentName = styled.span`
-  flex: 1;
-`;
-
-export const CheckboxLabel = styled.label`
-  margin-right: 10px;
-`;
-
-export const Divider = styled.hr`
-  margin-top: 5px;
-  border: 0;
-  border-top: 1px solid #ccc;
-`;
-
-export const SubmitButton = styled.button`
-  padding: 8px 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-`;
-
-
-export const SidebarContainer = styled.div`
-  flex: 0 0 250px; /* Sidebar width */
-`;
-
-export const AttendanceDate = styled.span`
-  font-weight: bold;
-`;
-
-export const AttendanceStatus = styled.span`
-  margin-left: 10px;
-  color: ${({ present }) => (present ? 'green' : 'red')};
-`;
