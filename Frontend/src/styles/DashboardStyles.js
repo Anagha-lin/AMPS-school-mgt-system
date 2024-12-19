@@ -1,11 +1,16 @@
-// AdminDashboardStyles.js
 import styled from 'styled-components';
 
 export const AdminDashboardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 3fr;
   gap: 20px;
-  background-color: #f8f9fa;
+  background-color: #f8f9fa; /* Light gray background */
+  min-height: 100vh; /* Full viewport height */
+  padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
 `;
 
 export const Content = styled.div`
@@ -13,13 +18,19 @@ export const Content = styled.div`
   padding: 25px;
   margin-left: ${({ isOpen }) => (isOpen ? '260px' : '100px')};
   transition: margin-left 0.3s ease;
-  background-color: #ffffff;
+  background-color: #ffffff; /* White content background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 `;
 
 export const TopContent = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stacks items on smaller screens */
+  }
 `;
 
 export const BottomContent = styled.div`
@@ -27,6 +38,10 @@ export const BottomContent = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 30px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Single column layout on smaller screens */
+  }
 `;
 
 export const Section = styled.section`
@@ -35,52 +50,68 @@ export const Section = styled.section`
 `;
 
 export const SectionTitle = styled.h2`
-  font-size: 26px;
+  font-size: 28px; /* Slightly larger for better hierarchy */
   margin-bottom: 15px;
-  color: #2c3e50;
+  color: #2c3e50; /* Dark text color */
+  font-weight: bold;
 `;
 
 export const CardContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+  }
 `;
 
 export const Card = styled.div`
-  background-color: #e3f2fd;
+  background-color: #e3f2fd; /* Light blue background */
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease-in-out;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More prominent shadow */
+  transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   text-align: center;
+
   &:hover {
-    transform: translateY(-8px);
-    background-color: #bbdefb;
+    transform: translateY(-8px); /* Lift effect */
+    background-color: #bbdefb; /* Slightly darker on hover */
   }
 `;
 
 export const CardTitle = styled.h3`
-  font-size: 20px;
+  font-size: 22px; /* Slightly larger for better emphasis */
   margin-bottom: 12px;
-  color: #1e88e5;
+  color: #1e88e5; /* Blue text */
+  font-weight: bold;
 `;
 
 export const CardContent = styled.p`
-  font-size: 15px;
-  color: #424242;
+  font-size: 16px;
+  color: #424242; /* Neutral gray for content */
 `;
 
 export const StudentDashboardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-color: #fafafa;
+  background-color: #fafafa; /* Off-white background */
+  padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Adjust to single column on smaller screens */
+  }
 `;
 
 export const TeacherDashboardContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr 4fr;
-  background-color: #fafafa;
+  background-color: #fafafa; /* Off-white background */
   padding: 20px;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr; /* Adjust to single column on smaller screens */
+  }
 `;
 
