@@ -14,15 +14,15 @@ const StudentDashboard = () => {
           <CardContainer>
             <Card>
               <CardTitle>Assignments</CardTitle>
-              <CardContent>5</CardContent>
+              <CardContent>None</CardContent>
             </Card>
             <Card>
               <CardTitle>Performance</CardTitle>
-              <CardContent>500</CardContent>
+              <CardContent>100</CardContent>
             </Card>
             <Card>
               <CardTitle>Term</CardTitle>
-              <CardContent>1</CardContent>
+              <CardContent>SECOND</CardContent>
             </Card>
           </CardContainer>
         </Section>
