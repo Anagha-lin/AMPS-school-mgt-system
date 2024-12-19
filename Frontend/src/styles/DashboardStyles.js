@@ -57,12 +57,13 @@ export const SectionTitle = styled.h2`
 `;
 
 export const CardContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap if needed */
   gap: 20px;
+  justify-content: space-between;
 
   @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr; /* Stacks cards on smaller screens */
+    flex-direction: column; /* Stacks cards vertically on smaller screens */
   }
 `;
 
@@ -74,6 +75,7 @@ export const Card = styled.div`
   transition: transform 0.3s ease, background-color 0.3s ease;
   cursor: pointer;
   text-align: center;
+  flex: 1; /* Cards take equal width */
 
   &:hover {
     transform: translateY(-8px); /* Lift effect */
@@ -82,10 +84,16 @@ export const Card = styled.div`
 `;
 
 export const CardTitle = styled.h3`
+  display: inline-block; /* Ensures titles are horizontally aligned */
   font-size: 22px; /* Slightly larger for better emphasis */
-  margin-bottom: 12px;
+  margin-right: 15px; /* Adds spacing between card titles */
   color: #1e88e5; /* Blue text */
   font-weight: bold;
+
+  @media screen and (max-width: 768px) {
+    display: block; /* Stacks titles vertically on smaller screens */
+    margin-right: 0;
+  }
 `;
 
 export const CardContent = styled.p`
