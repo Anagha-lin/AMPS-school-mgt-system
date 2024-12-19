@@ -58,14 +58,16 @@ export const SectionTitle = styled.h2`
 
 export const CardContainer = styled.div`
   display: flex;
-  flex-wrap: wrap; /* Allows items to wrap if needed */
-  gap: 20px;
+  gap: 20px; /* Adds spacing between cards */
   justify-content: space-between;
+  overflow-x: auto; /* Allows horizontal scrolling if the content overflows */
+  white-space: nowrap; /* Prevents wrapping of cards */
 
   @media screen and (max-width: 768px) {
-    flex-direction: column; /* Stacks cards vertically on smaller screens */
+    justify-content: flex-start; /* Aligns cards to the left on smaller screens */
   }
 `;
+
 
 export const Card = styled.div`
   background-color: #e3f2fd; /* Light blue background */
