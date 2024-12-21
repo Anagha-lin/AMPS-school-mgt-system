@@ -1,61 +1,77 @@
 // ClassesStyles.js
 import styled from 'styled-components';
 
-// Outer container
-export const ClassContainer = styled.div`
+export const ClassesContainer = styled.div`
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  height: 100vh;
-  width: 100%;
-`;
+  padding-left: 240px;
 
-// Sidebar container
-export const SidebarContainer = styled.div`
-  width: 20%; /* Reduce width for sidebar */
-  min-width: 200px;
-  background-color: #f4f4f4;
-  height: 100%;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-`;
-
-// Main content
-export const Content = styled.div`
-  flex: 1;
-  margin-left: auto; /* Push content to the right */
-  padding: 20px;
-  background-color: #ffffff;
-`;
-
-// Header for the classes section
-export const ClassHeader = styled.h1`
-  font-size: 1.8rem;
-  text-align: center;
-  color: #333333;
-  margin-bottom: 20px;
-`;
-
-// List container for classes
-export const ClassList = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the left within the content */
-  gap: 15px;
-`;
-
-// Individual class item
-export const ClassItem = styled.div`
-  background-color: #e8f4fc;
-  border: 1px solid #cce7f6;
-  border-radius: 8px;
-  padding: 10px 15px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  text-align: left;
-  h3 {
-    margin: 0;
-    font-size: 1.2rem;
-    color: #1e81b0;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 0;
   }
 `;
 
+export const Content = styled.div`
+  flex: 1;
+`;
+
+export const ClassesContent = styled.div`
+  padding: 20px;
+`;
+
+export const ClassesHeader = styled.h2`
+  font-size: 24px;
+  margin-bottom: 20px;
+`;
+
+export const ClassList = styled.ul`
+  list-style: none;
+  padding: 0;
+`;
+
+export const ClassItem = styled.li`
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+`;
+
+export const AddClassForm = styled.form`
+  margin-bottom: 20px;
+`;
+
+export const AddClassInput = styled.input`
+  padding: 8px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+`;
+
+export const AddClassButton = styled.button`
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+`;
+
+
+export const ClassContainer = styled.div`
+  display: flex;
+`;
+
+export const SidebarContainer = styled.div`
+  flex: 0 0 250px; /* Sidebar width */
+`;
+
+export const ClassHeader = styled.h1`
+  font-size: 24px;
+  margin-bottom: 20px;
+`;
+
+export const GradeHeader = styled.h3`
+  font-size: 18px;
+  margin-bottom: 10px;
+`;
